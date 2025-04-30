@@ -348,6 +348,12 @@
           <a href="#tabs" class="nav-link">Tabs</a>
         </li>
         <li class="nav-list-item">
+          <a href="#data-tables" class="nav-link">Data Tables</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#dialog" class="nav-link">Dialog</a>
+        </li>
+        <li class="nav-list-item">
           <a href="#layout" class="nav-link">Layout Components</a>
         </li>
         <li class="nav-list-item">
@@ -1055,6 +1061,409 @@
               &lt;md-tabs&gt; &lt;md-secondary-tab&gt;Secondary
               1&lt;/md-secondary-tab&gt; &lt;md-secondary-tab&gt;Secondary
               2&lt;/md-secondary-tab&gt; &lt;/md-tabs&gt;
+            </div>
+          </div>
+        </div>
+
+        <div id="data-tables" class="card component-section">
+          <h2 class="section-title">Data Tables</h2>
+          <p>
+            Data tables display information in a grid-like format of rows and
+            columns. They organize information in a way that's easy to scan so
+            that users can look for patterns and insights.
+          </p>
+
+          <h3>Standard Data Table</h3>
+          <div class="example-row" style="display: block; overflow-x: auto">
+            <table class="mdc-data-table">
+              <thead>
+                <tr>
+                  <th>Dessert</th>
+                  <th>Calories</th>
+                  <th>Fat (g)</th>
+                  <th>Carbs (g)</th>
+                  <th>Protein (g)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Frozen yogurt</td>
+                  <td>159</td>
+                  <td>6</td>
+                  <td>24</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>Ice cream sandwich</td>
+                  <td>237</td>
+                  <td>9</td>
+                  <td>37</td>
+                  <td>4.3</td>
+                </tr>
+                <tr>
+                  <td>Eclair</td>
+                  <td>262</td>
+                  <td>16</td>
+                  <td>24</td>
+                  <td>6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="code-container">
+            <button
+              class="copy-button"
+              data-code='<table class="mdc-data-table"><thead><tr><th>Dessert</th><th>Calories</th><th>Fat (g)</th><th>Carbs (g)</th><th>Protein (g)</th></tr></thead><tbody><tr><td>Frozen yogurt</td><td>159</td><td>6</td><td>24</td><td>4</td></tr><tr><td>Ice cream sandwich</td><td>237</td><td>9</td><td>37</td><td>4.3</td></tr><tr><td>Eclair</td><td>262</td><td>16</td><td>24</td><td>6</td></tr></tbody></table>'
+            >
+              Copy
+            </button>
+            <div class="code-block">
+              &lt;table class="mdc-data-table"&gt; &lt;thead&gt; &lt;tr&gt;
+              &lt;th&gt;Dessert&lt;/th&gt; &lt;th&gt;Calories&lt;/th&gt;
+              &lt;th&gt;Fat (g)&lt;/th&gt; &lt;th&gt;Carbs (g)&lt;/th&gt;
+              &lt;th&gt;Protein (g)&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt;
+              &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;Frozen yogurt&lt;/td&gt;
+              &lt;td&gt;159&lt;/td&gt; &lt;td&gt;6&lt;/td&gt;
+              &lt;td&gt;24&lt;/td&gt; &lt;td&gt;4&lt;/td&gt; &lt;/tr&gt;
+              &lt;tr&gt; &lt;td&gt;Ice cream sandwich&lt;/td&gt;
+              &lt;td&gt;237&lt;/td&gt; &lt;td&gt;9&lt;/td&gt;
+              &lt;td&gt;37&lt;/td&gt; &lt;td&gt;4.3&lt;/td&gt; &lt;/tr&gt;
+              &lt;tr&gt; &lt;td&gt;Eclair&lt;/td&gt; &lt;td&gt;262&lt;/td&gt;
+              &lt;td&gt;16&lt;/td&gt; &lt;td&gt;24&lt;/td&gt;
+              &lt;td&gt;6&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;
+            </div>
+          </div>
+
+          <h3>Sticky Header Data Table</h3>
+          <p>
+            Add the <code>sticky</code> class to make the table header stick
+            when scrolling through a large table.
+          </p>
+          <div
+            class="example-row"
+            style="display: block; max-height: 250px; overflow-y: auto"
+          >
+            <table class="mdc-data-table sticky">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Department</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John Doe</td>
+                  <td>john@example.com</td>
+                  <td>Engineering</td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td>Jane Smith</td>
+                  <td>jane@example.com</td>
+                  <td>Marketing</td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td>Robert Johnson</td>
+                  <td>robert@example.com</td>
+                  <td>Finance</td>
+                  <td>Inactive</td>
+                </tr>
+                <tr>
+                  <td>Emily Davis</td>
+                  <td>emily@example.com</td>
+                  <td>HR</td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td>Michael Brown</td>
+                  <td>michael@example.com</td>
+                  <td>Engineering</td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td>Sarah Wilson</td>
+                  <td>sarah@example.com</td>
+                  <td>Sales</td>
+                  <td>Inactive</td>
+                </tr>
+                <tr>
+                  <td>David Miller</td>
+                  <td>david@example.com</td>
+                  <td>Product</td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td>Jennifer Lee</td>
+                  <td>jennifer@example.com</td>
+                  <td>Design</td>
+                  <td>Active</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="code-container">
+            <button
+              class="copy-button"
+              data-code='<table class="mdc-data-table sticky"><!-- Same structure as standard table --></table>'
+            >
+              Copy
+            </button>
+            <div class="code-block">
+              &lt;table class="mdc-data-table sticky"&gt; &lt;!-- Same structure
+              as standard table --&gt; &lt;/table&gt;
+            </div>
+          </div>
+
+          <h3>Data Table with Links</h3>
+          <div class="example-row" style="display: block; overflow-x: auto">
+            <table class="mdc-data-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Project Alpha</td>
+                  <td><a href="#">View details</a></td>
+                </tr>
+                <tr>
+                  <td>Project Beta</td>
+                  <td><a href="#">View details</a></td>
+                </tr>
+                <tr>
+                  <td>Project Gamma</td>
+                  <td><a href="#">View details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="variables-list">
+            <p>
+              <span class="css-variable">th</span> - Header cells use
+              font-weight: 600 and font-size: 12px
+            </p>
+            <p>
+              <span class="css-variable"
+                >tbody tr:nth-child(even):not(:hover)</span
+              >
+              - Even rows have light gray background (#f0f3f5)
+            </p>
+            <p>
+              <span class="css-variable">tr:hover</span> - Rows change
+              background on hover
+            </p>
+          </div>
+        </div>
+
+        <div id="dialog" class="card component-section">
+          <h2 class="section-title">Dialog</h2>
+          <p>
+            Dialogs are used to display important information or actions that
+            require user attention.
+          </p>
+
+          <h3>Dialog Preview</h3>
+          <div class="example-row">
+            <md-filled-button id="open-dialog-demo"
+              >Open Dialog</md-filled-button
+            >
+
+            <md-dialog id="demo-dialog">
+              <div slot="headline">Dialog Title</div>
+              <div slot="content">
+                This is a dialog example with content that requires attention.
+                <p>You can interact with this dialog to see how it works.</p>
+              </div>
+              <div slot="actions">
+                <md-outlined-button id="cancel-dialog-demo"
+                  >Cancel</md-outlined-button
+                >
+                <md-filled-button id="confirm-dialog-demo"
+                  >Confirm</md-filled-button
+                >
+              </div>
+            </md-dialog>
+          </div>
+
+          <script>
+            // Dialog demo functionality
+            document.addEventListener("DOMContentLoaded", function () {
+              const openDialogButton =
+                document.getElementById("open-dialog-demo");
+              const demoDialog = document.getElementById("demo-dialog");
+              const cancelButton =
+                document.getElementById("cancel-dialog-demo");
+              const confirmButton = document.getElementById(
+                "confirm-dialog-demo"
+              );
+
+              if (openDialogButton && demoDialog) {
+                openDialogButton.addEventListener("click", function () {
+                  demoDialog.open = true;
+                });
+
+                cancelButton.addEventListener("click", function () {
+                  demoDialog.open = false;
+                });
+
+                confirmButton.addEventListener("click", function () {
+                  demoDialog.open = false;
+                });
+              }
+            });
+          </script>
+
+          <div class="code-container">
+            <button
+              class="copy-button"
+              data-code="<md-filled-button id='open-dialog'>Open Dialog</md-filled-button>
+
+<md-dialog id='my-dialog'>
+  <div slot='headline'>Dialog Title</div>
+  <div slot='content'>
+    This is a dialog example with content that requires attention.
+  </div>
+  <div slot='actions'>
+    <md-outlined-button id='cancel-dialog'>Cancel</md-outlined-button>
+    <md-filled-button id='confirm-dialog'>Confirm</md-filled-button>
+  </div>
+</md-dialog>
+
+<script>
+  const openButton = document.getElementById('open-dialog');
+  const dialog = document.getElementById('my-dialog');
+  const cancelButton = document.getElementById('cancel-dialog');
+  const confirmButton = document.getElementById('confirm-dialog');
+  
+  openButton.addEventListener('click', () => {
+    dialog.open = true;
+  });
+  
+  cancelButton.addEventListener('click', () => {
+    dialog.open = false;
+  });
+  
+  confirmButton.addEventListener('click', () => {
+    dialog.open = false;
+    // Add any confirmation logic here
+  });
+</script>"
+            >
+              Copy
+            </button>
+            <div class="code-block">
+              &lt;md-filled-button id='open-dialog'&gt;Open
+              Dialog&lt;/md-filled-button&gt; &lt;md-dialog id='my-dialog'&gt;
+              &lt;div slot='headline'&gt;Dialog Title&lt;/div&gt; &lt;div
+              slot='content'&gt; This is a dialog example with content that
+              requires attention. &lt;/div&gt; &lt;div slot='actions'&gt;
+              &lt;md-outlined-button
+              id='cancel-dialog'&gt;Cancel&lt;/md-outlined-button&gt;
+              &lt;md-filled-button
+              id='confirm-dialog'&gt;Confirm&lt;/md-filled-button&gt;
+              &lt;/div&gt; &lt;/md-dialog&gt; &lt;script&gt; const openButton =
+              document.getElementById('open-dialog'); const dialog =
+              document.getElementById('my-dialog'); const cancelButton =
+              document.getElementById('cancel-dialog'); const confirmButton =
+              document.getElementById('confirm-dialog');
+              openButton.addEventListener('click', () => { dialog.open = true;
+              }); cancelButton.addEventListener('click', () => { dialog.open =
+              false; }); confirmButton.addEventListener('click', () => {
+              dialog.open = false; // Add any confirmation logic here });
+              &lt;/script&gt;
+            </div>
+          </div>
+
+          <div class="variables-list">
+            <p>
+              <span class="css-variable">--md-dialog-container-shape: 4px</span>
+              - Dialog corner radius
+            </p>
+            <p>
+              <span class="css-variable">--md-dialog-headline-size: 18px</span>
+              - Dialog title text size
+            </p>
+            <p>
+              <span class="css-variable">--md-dialog-headline-weight: 600</span>
+              - Dialog title text weight
+            </p>
+            <p>
+              <span class="css-variable"
+                >--md-sys-color-on-surface: #2a394f</span
+              >
+              - Dialog text color
+            </p>
+          </div>
+
+          <h3>Basic Dialog</h3>
+          <div class="example-row">
+            <md-dialog>
+              <div class="dialog-content">
+                <h2>Dialog Title</h2>
+                <p>This is a basic dialog example.</p>
+              </div>
+              <div class="dialog-actions">
+                <md-button dialog-action="close">Close</md-button>
+                <md-button dialog-action="confirm">Confirm</md-button>
+              </div>
+            </md-dialog>
+          </div>
+          <div class="code-container">
+            <button
+              class="copy-button"
+              data-code="<md-dialog><div class='dialog-content'><h2>Dialog Title</h2><p>This is a basic dialog example.</p></div><div class='dialog-actions'><md-button dialog-action='close'>Close</md-button><md-button dialog-action='confirm'>Confirm</md-button></div></md-dialog>"
+            >
+              Copy
+            </button>
+            <div class="code-block">
+              &lt;md-dialog&gt; &lt;div class="dialog-content"&gt;
+              &lt;h2&gt;Dialog Title&lt;/h2&gt; &lt;p&gt;This is a basic dialog
+              example.&lt;/p&gt; &lt;/div&gt; &lt;div class="dialog-actions"&gt;
+              &lt;md-button dialog-action="close"&gt;Close&lt;/md-button&gt;
+              &lt;md-button dialog-action="confirm"&gt;Confirm&lt;/md-button&gt;
+              &lt;/div&gt; &lt;/md-dialog&gt;
+            </div>
+          </div>
+
+          <h3>Customized Dialog</h3>
+          <div class="example-row">
+            <md-dialog>
+              <div class="dialog-content">
+                <h2>Custom Dialog</h2>
+                <p>This dialog has customized styles and actions.</p>
+              </div>
+              <div class="dialog-actions">
+                <md-button dialog-action="cancel" class="custom-cancel-btn"
+                  >Cancel</md-button
+                >
+                <md-button dialog-action="proceed" class="custom-proceed-btn"
+                  >Proceed</md-button
+                >
+              </div>
+            </md-dialog>
+          </div>
+          <div class="code-container">
+            <button
+              class="copy-button"
+              data-code="<md-dialog><div class='dialog-content'><h2>Custom Dialog</h2><p>This dialog has customized styles and actions.</p></div><div class='dialog-actions'><md-button dialog-action='cancel' class='custom-cancel-btn'>Cancel</md-button><md-button dialog-action='proceed' class='custom-proceed-btn'>Proceed</md-button></div></md-dialog>"
+            >
+              Copy
+            </button>
+            <div class="code-block">
+              &lt;md-dialog&gt; &lt;div class="dialog-content"&gt;
+              &lt;h2&gt;Custom Dialog&lt;/h2&gt; &lt;p&gt;This dialog has
+              customized styles and actions.&lt;/p&gt; &lt;/div&gt; &lt;div
+              class="dialog-actions"&gt; &lt;md-button dialog-action="cancel"
+              class="custom-cancel-btn"&gt;Cancel&lt;/md-button&gt;
+              &lt;md-button dialog-action="proceed"
+              class="custom-proceed-btn"&gt;Proceed&lt;/md-button&gt;
+              &lt;/div&gt; &lt;/md-dialog&gt;
             </div>
           </div>
         </div>

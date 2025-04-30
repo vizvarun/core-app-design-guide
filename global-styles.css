@@ -1,4 +1,12 @@
 :root {
+  /** Default text color (if not specified) **/
+  color: #2a394f;
+
+  /* Set font family (omitting icons) */
+  *:not(md-icon, .fa, .fas, .fal, .far) {
+    font-family: "Work Sans";
+  }
+
   /* Theming Colors */
   --md-sys-color-primary: #293f96;
   --mdc-theme-primary: #293f96;
@@ -293,6 +301,57 @@
 
   md-secondary-tab {
     font-size: 12px;
+  }
+
+  /* MDC Web 3 - Vanilla Data Table Styling */
+  .mdc-data-table {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    border-collapse: separate;
+    background: white;
+    border-spacing: 0;
+  }
+
+  .mdc-data-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  .mdc-data-table tbody tr:nth-child(even):not(:hover) {
+    background-color: #f0f3f5;
+  }
+
+  .mdc-data-table th,
+  .mdc-data-table td {
+    padding: 16px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .mdc-data-table th {
+    font-weight: 600;
+    font-size: 12px;
+    color: #637a89;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+  }
+  .mdc-data-table.sticky th {
+    background: white;
+    position: sticky;
+    top: 0;
+  }
+
+  .mdc-data-table {
+    width: 100%;
+    overflow-x: auto;
+    background: var(--mdc-theme-surface, #fff);
+    border-radius: 4px;
+  }
+
+  a {
+    color: #293f96;
+    font-weight: 600;
+    text-decoration: none;
   }
 } /* end :root */
 
